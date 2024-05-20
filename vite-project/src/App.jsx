@@ -2,7 +2,7 @@ import React from 'react'
 import Home from './Home'
 import './App.css'
 // import Create from './Create'
-import DropdownMenu from './Dropdown'
+// import DropdownMenu from './Dropdown'
 
 function App() {
 
@@ -11,7 +11,7 @@ function App() {
     <>
       <Home />
       {/* <Create /> */}
-      <DropdownMenu />
+      {/* <DropdownMenu /> */}
 
     </>
   )
