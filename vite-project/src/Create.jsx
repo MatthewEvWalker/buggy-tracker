@@ -1,29 +1,29 @@
 import React, { useState } from "react";
 import axios from "axios";
-import DropdownMenu from "./Dropdown";
-import Home from "./Home"
+// import DropdownMenu from "./Dropdown";
+// import Home from "./Home"
 // import "./Create.css"; // Import CSS file for styling
 
 const Create = (props) => {
   const [date, setDate] = useState("");
   const [task, setTask] = useState("");
-  const [color, setColor] = useState("");
+  // const [color, setColor] = useState("");
   const [address, setAddress] = useState("");
   // const [selectedSvg, setSelectedSvg] = useState(null);
   const [selectedColor, setSelectedColor] = useState(""); // State for selected color
 
 
-  const isValidDate = (inputDate) => {
-    // Check if the input string matches the format MM/DD/YY
-    const regex = /^\d{2}\/\d{2}\/\d{2}$/;
-    if (!regex.test(inputDate)) {
-      return false; // Return false if the format is incorrect
-    }
+  // const isValidDate = (inputDate) => {
+  //   // Check if the input string matches the format MM/DD/YY
+  //   const regex = /^\d{2}\/\d{2}\/\d{2}$/;
+  //   if (!regex.test(inputDate)) {
+  //     return false; // Return false if the format is incorrect
+  //   }
   
-    // Check if the parsed date is valid
-    const formattedDate = formatDate(inputDate);
-    return formattedDate !== 'Invalid Date'; // Return true if the formatted date is not 'Invalid Date'
-  };
+  //   // Check if the parsed date is valid
+  //   const formattedDate = formatDate(inputDate);
+  //   return formattedDate !== 'Invalid Date'; // Return true if the formatted date is not 'Invalid Date'
+  // };
   
   const handleAdd = () => {
     // Check if the date format is incorrect

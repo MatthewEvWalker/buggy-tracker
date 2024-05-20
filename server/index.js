@@ -21,12 +21,12 @@ app.get("/get", async (req, res) => {
     }
 });
 
-app.put("/edit/:id", async (req, res) => {
-    const {id} = req.params;
-    TodoModel.findById(id, (err, todo) => {{id: id}}, {done: true}).then((result) => res.json(result))
-    .catch((err) => console.log(err));
-    console.log(id);
-})
+// app.put("/edit/:id", async (req, res) => {
+//     const {id} = req.params;
+//     TodoModel.findById(id, (err, todo) => {{id: id}}, {done: true}).then((result) => res.json(result))
+//     .catch((err) => console.log(err));
+//     console.log(id);
+// })
 
 app.delete("/delete/:id", async (req, res) => {
     const {id} = req.params;
