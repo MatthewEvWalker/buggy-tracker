@@ -9,11 +9,15 @@ const PORT = 3001;
 app.use(express.json());
 app.use(cors(
     {
-        origin: ["https://buggy-tracker.vercel.app/"],
+        origin: [""],
         methods: ["GET", "POST", "PUT", "DELETE"],
         credentials: true
     }
 ));
+
+app.get("/", (req, res) => {
+    res.json("hello");
+})
 
 
 // use this one to get local host server
