@@ -31,7 +31,7 @@ mongoose.connect('mongodb+srv://matthewevwalker:Foutin1965@buggy-data.ufnlatf.mo
 
 
 
-app.get("/", async (req, res) => {
+app.get("/get", async (req, res) => {
     try {
         const todos = await TodoModel.find({});
         res.json(todos);
