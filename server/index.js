@@ -15,9 +15,9 @@ app.use(cors(
     }
 ));
 
-app.get("/", (req, res) => {
-    res.json("hello");
-})
+// app.get("/", (req, res) => {
+//     res.json("hello");
+// })
 
 
 // use this one to get local host server
@@ -31,7 +31,7 @@ mongoose.connect('mongodb+srv://matthewevwalker:Foutin1965@buggy-data.ufnlatf.mo
 
 
 
-app.get("/get", async (req, res) => {
+app.get("/", async (req, res) => {
     try {
         const todos = await TodoModel.find({});
         res.json(todos);
