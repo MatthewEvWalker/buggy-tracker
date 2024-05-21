@@ -22,7 +22,7 @@ app.use(cors(
 
 // use this one to get local host server
 // mongoose.connect('mongodb://127.0.0.1:27017/todoDB');
-mongoose.connect('mongodb+srv://matthewevwalker:<Foutin1965>@buggy-data.ufnlatf.mongodb.net/todoDB?retryWrites=true&w=majority&appName=Buggy-Data');
+mongoose.connect('mongodb+srv://matthewevwalker:Foutin1965@buggy-data.ufnlatf.mongodb.net/todoDB?retryWrites=true&w=majority&appName=Buggy-Data');
 
 
 
