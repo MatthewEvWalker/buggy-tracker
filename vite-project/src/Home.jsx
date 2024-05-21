@@ -17,15 +17,28 @@ const Home = () => {
   const [francesCount, setFrancesCount] = useState(0); // State for Frances count
 
 
+  // use this for localhost version
+
   // takes the data from the mongoDB cluster
+  // const fetchTodos = () => {
+  //   axios.get("http://localhost:3001/get")
+  //     .then((result) => {
+  //       // puts the rows from top to bottom, so that the new ones are at the top
+  //       setTodos(result.data.reverse());
+  //     })
+  //     .catch((err) => console.log(err));
+  // };
+
   const fetchTodos = () => {
-    axios.get("http://localhost:3001/get")
+    axios.get("https://buggy-tracker-frontend.vercel.app/get")
       .then((result) => {
         // puts the rows from top to bottom, so that the new ones are at the top
         setTodos(result.data.reverse());
       })
       .catch((err) => console.log(err));
   };
+
+
 
   const handleDelete = (id) => {
     axios.delete("http://localhost:3001/delete/" + id)
