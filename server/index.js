@@ -7,9 +7,25 @@ const app = express();
 const PORT = 3001;
 
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+    {
+        origin: ["https://buggy-tracker.vercel.app/"],
+        methods: ["GET", "POST", "PUT", "DELETE"],
+        credentials: true
+    }
+));
 
-mongoose.connect('mongodb://127.0.0.1:27017/todoDB');
+
+// use this one to get local host server
+// app.use(cors());
+
+
+// use this one to get local host server
+// mongoose.connect('mongodb://127.0.0.1:27017/todoDB');
+mongoose.connect('mongodb+srv://matthewevwalker:<Foutin1965>@buggy-data.ufnlatf.mongodb.net/todoDB?retryWrites=true&w=majority&appName=Buggy-Data');
+
+
+
 
 app.get("/get", async (req, res) => {
     try {
