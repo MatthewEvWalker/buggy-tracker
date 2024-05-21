@@ -9,7 +9,7 @@ const PORT = 3001;
 app.use(express.json());
 app.use(cors(
     {
-        origin: ["https://buggy-tracker-frontend.vercel.app/"],
+        origin: ["https://buggy-tracker-frontend.vercel.app"],
         methods: ["GET", "POST", "PUT", "DELETE"],
         credentials: true
     }
