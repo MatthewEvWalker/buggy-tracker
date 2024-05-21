@@ -34,7 +34,8 @@ const Create = (props) => {
     // } 
 
   
-    axios.post("buggy-tracker.vercel.app/add", { date, task, color: selectedColor, address })
+    // use local host for this one
+    axios.post("https://buggy-tracker.vercel.app/add", { date, task, color: selectedColor, address })
       .then((result) => {
         console.log(result.data);
         location.reload(result);

@@ -29,8 +29,9 @@ const Home = () => {
   //     .catch((err) => console.log(err));
   // };
 
+// use "http://localhost:3001/get/ for mongo compass
   const fetchTodos = () => {
-    axios.get("buggy-tracker.vercel.app/get")
+    axios.get("https://buggy-tracker.vercel.app/get")
       .then((result) => {
         // puts the rows from top to bottom, so that the new ones are at the top
         setTodos(result.data.reverse());
@@ -39,7 +40,7 @@ const Home = () => {
   };
 
 
-
+// use "http://localhost:3001/delete/ for mongo compass
   const handleDelete = (id) => {
     axios.delete("http://localhost:3001/delete/" + id)
       .then(() => {
