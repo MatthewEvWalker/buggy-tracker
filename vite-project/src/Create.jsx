@@ -12,7 +12,7 @@ const Create = (props) => {
   // const [selectedSvg, setSelectedSvg] = useState(null);
   const [selectedColor, setSelectedColor] = useState(""); // State for selected color
 
-
+  axios.defaults.withCredentials = true;
   // const isValidDate = (inputDate) => {
   //   // Check if the input string matches the format MM/DD/YY
   //   const regex = /^\d{2}\/\d{2}\/\d{2}$/;
@@ -34,7 +34,7 @@ const Create = (props) => {
     // } 
 
   
-    axios.post("buggy-tracker.vercel.app", { date, task, color: selectedColor, address })
+    axios.post("buggy-tracker.vercel.app/add", { date, task, color: selectedColor, address })
       .then((result) => {
         console.log(result.data);
         location.reload(result);
