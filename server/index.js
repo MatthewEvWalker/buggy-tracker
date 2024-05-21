@@ -15,9 +15,9 @@ app.use(cors(
     }
 ));
 
-app.get("/", (req, res) => {
-    res.json("hello");
-})
+// app.get("/", (req, res) => {
+//     res.json("hello");
+// })
 
 
 // use this one to get local host server
