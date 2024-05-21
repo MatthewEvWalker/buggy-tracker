@@ -30,7 +30,7 @@ const Home = () => {
   // };
 
   const fetchTodos = () => {
-    axios.get("https://buggy-tracker-frontend.vercel.app/get")
+    axios.get("buggy-tracker.vercel.app/get")
       .then((result) => {
         // puts the rows from top to bottom, so that the new ones are at the top
         setTodos(result.data.reverse());
