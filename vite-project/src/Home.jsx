@@ -31,7 +31,7 @@ const Home = () => {
 
 // use "http://localhost:3001/get/ for mongo compass
   const fetchTodos = () => {
-    axios.get("https://buggy-tracker.vercel.app/api/add")
+    axios.get("https://buggy-tracker.vercel.app/api/get/")
       .then((result) => {
         // puts the rows from top to bottom, so that the new ones are at the top
         setTodos(result.data.reverse());
